@@ -370,24 +370,9 @@ code{
 
 </ul>
 
-<hr class="divider">
-<div class="h2">✅ Checkliste</div>
-<ul class="cl">
-  <li><input type="checkbox" data-id="so1"><span>Schloss Benrath Mo geschlossen! → Di–So buchen</span></li>
-  <li><input type="checkbox" data-id="so2"><span>Mittagessen in Zons reservieren?</span></li>
-  <li><input type="checkbox" data-id="so3"><span>Rückweg / Abreise planen</span></li>
-  <li><input type="checkbox" data-id="so4"><span>Abreise nach Hause vom Hotel einplanen</span></li>
-</ul>
 
 
 
 </main>
-<script>
-document.querySelectorAll('.cl input[type=checkbox]').forEach(cb=>{
-  const k='rad26_'+location.pathname+'_'+cb.dataset.id;
-  if(localStorage.getItem(k)==='1')cb.checked=true;
-  cb.addEventListener('change',()=>localStorage.setItem(k,cb.checked?'1':'0'));
-});
-</script>
 </body>
 </html>

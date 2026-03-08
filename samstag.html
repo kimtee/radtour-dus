@@ -414,23 +414,9 @@ code{
 
 </ul>
 
-<hr class="divider">
-<div class="h2">✅ Checkliste</div>
-<ul class="cl">
-  <li><input type="checkbox" data-id="sa1"><span>Schloss Kalkum Öffnungszeiten prüfen</span></li>
-  <li><input type="checkbox" data-id="sa2"><span>Tischreservierung Altstadt abends vornehmen</span></li>
-  <li><input type="checkbox" data-id="sa3"><span>Altbierkneipe vormerken</span></li>
-</ul>
 
 
 
 </main>
-<script>
-document.querySelectorAll('.cl input[type=checkbox]').forEach(cb=>{
-  const k='rad26_'+location.pathname+'_'+cb.dataset.id;
-  if(localStorage.getItem(k)==='1')cb.checked=true;
-  cb.addEventListener('change',()=>localStorage.setItem(k,cb.checked?'1':'0'));
-});
-</script>
 </body>
 </html>

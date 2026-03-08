@@ -418,27 +418,9 @@ code{
   </div>
 
 </div>
-<ul class="cl">
-  <li><input type="checkbox" data-id="fr1"><span>Neanderthal Museum Tickets vorab reservieren?</span></li>
-  <li><input type="checkbox" data-id="fr_aue"><span>🍽️ Restaurant Auermühle reservieren – 14 Pers., Freitag 13:00 · Tel. 02102 89298</span></li>
-  <li><input type="checkbox" data-id="fr2"><span>Verpflegung & Getränke einpacken</span></li>
-  <li><input type="checkbox" data-id="fr3"><span>Öffnungszeiten Museum prüfen (Di–So!)</span></li>
-  <li><input type="checkbox" data-id="fr5"><span>🌙 Abend-Option wählen: Planetarium oder Little Tokyo?</span></li>
-  <li><input type="checkbox" data-id="fr6"><span>🔭 Falls Planetarium: Juni-Termine auf snh.nrw prüfen & Tickets buchen (€ 15,–/Person)</span></li>
-  <li><input type="checkbox" data-id="fr7"><span>🍽️ Abendessen nach Planetarium wählen: Herr Knillmann oder Trattoria da Giovanni?</span></li>
-  <li><input type="checkbox" data-id="fr8"><span>🍽️ Abendessen für 14 Personen reservieren (Knillmann: 0211 22 086 790 · Fr bis 24 Uhr)</span></li>
-  <li><input type="checkbox" data-id="fr4"><span>🍣 Falls Little Tokyo: Kushi-Tei of Tokyo reservieren</span></li>
-</ul>
 
 
 
 </main>
-<script>
-document.querySelectorAll('.cl input[type=checkbox]').forEach(cb=>{
-  const k='rad26_'+location.pathname+'_'+cb.dataset.id;
-  if(localStorage.getItem(k)==='1')cb.checked=true;
-  cb.addEventListener('change',()=>localStorage.setItem(k,cb.checked?'1':'0'));
-});
-</script>
 </body>
 </html>
