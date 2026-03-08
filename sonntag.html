@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sonntag, 21. Juni 2026 – Radtour 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&display=swap');
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg:#f5f3ef;
+  --bg2:#ffffff;
+  --sidebar:#1c1c1e;
+  --sidebar-hover:#2a2a2d;
+  --text:#2c2c2e;
+  --text2:#8a8a8e;
+  --link:#c06030;
+  --link-h:#9a4820;
+  --accent:#e8956d;
+  --accent2:#f5ddd0;
+  --border:#e2ddd6;
+  --tag-bg:#ede9e2;
+  --tag:#7a6a58;
+  --green:#2e7d32;
+  --orange:#c05020;
+  --blue:#1a5296;
+  --tbl-h:#ede9e3;
+  --tbl-s:#f8f6f2;
+  --bullet:#c8b8a2;
+  --warn:#c05020;
+  --check:#c06030;
+  --sh:0 1px 4px rgba(0,0,0,.07);
+  --sh2:0 3px 12px rgba(0,0,0,.1);
+}
+
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  display:flex;
+  min-height:100vh;
+  font-size:15px;
+  line-height:1.7;
+}
+
+/* ── Sidebar ─────────────────────────────────── */
+.sidebar{
+  width:230px;min-height:100vh;flex-shrink:0;
+  background:var(--sidebar);
+  display:flex;flex-direction:column;
+  position:sticky;top:0;height:100vh;overflow-y:auto;
+}
+.sb-logo{
+  padding:22px 16px 18px;
+  display:flex;align-items:center;gap:10px;
+  border-bottom:1px solid #2e2e30;
+}
+.sb-logo-icon{
+  width:32px;height:32px;background:var(--accent);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;flex-shrink:0;
+}
+.sb-logo-text{line-height:1.25}
+.sb-logo-title{font-size:12px;font-weight:600;color:#fff;letter-spacing:.02em}
+.sb-logo-sub{font-size:10.5px;color:#666}
+.sb-section{
+  padding:16px 12px 5px;
+  font-size:10px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.12em;color:#555;
+}
+.sidebar nav a{
+  display:flex;align-items:center;gap:9px;
+  padding:8px 14px 8px 12px;
+  color:#aaa;text-decoration:none;font-size:13px;
+  border-radius:6px;margin:1px 6px;
+  transition:background .15s,color .15s;
+  border-left:2px solid transparent;
+}
+.sidebar nav a:hover{background:var(--sidebar-hover);color:#fff}
+.sidebar nav a.active{
+  background:#2e2218;color:var(--accent);
+  border-left-color:var(--link);
+}
+.sb-em{font-size:14px;width:18px;text-align:center;flex-shrink:0}
+.sidebar-footer{
+  margin-top:auto;padding:14px 14px 18px;
+  font-size:10.5px;color:#444;border-top:1px solid #2a2a2c;
+  line-height:1.6;
+}
+
+/* ── Main content ─────────────────────────────── */
+.main{flex:1;max-width:820px;padding:44px 52px 80px;min-height:100vh}
+
+/* ── Page header ──────────────────────────────── */
+.page-eyebrow{
+  font-size:11px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.1em;color:var(--text2);margin-bottom:6px;
+}
+.page-title{
+  font-family:'Crimson Pro',Georgia,serif;
+  font-size:34px;font-weight:600;
+  color:var(--text);line-height:1.2;
+  margin-bottom:10px;letter-spacing:-.01em;
+}
+.page-subtitle{
+  font-size:14px;color:var(--text2);margin-bottom:16px;
+  font-weight:300;
+}
+.page-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:30px}
+.tag{
+  background:var(--tag-bg);color:var(--tag);
+  font-size:11px;font-weight:500;
+  padding:2px 10px;border-radius:12px;
+  font-family:'DM Mono',monospace;letter-spacing:.02em;
+}
+
+/* ── Divider ──────────────────────────────────── */
+.divider{border:none;border-top:1px solid var(--border);margin:24px 0}
+
+/* ── Headings ─────────────────────────────────── */
+.h2{
+  font-family:'Crimson Pro',serif;
+  font-size:21px;font-weight:600;color:var(--text);
+  margin:30px 0 10px;display:flex;align-items:center;gap:8px;
+}
+.h3{
+  font-size:14px;font-weight:600;color:var(--orange);
+  margin:18px 0 7px;display:flex;align-items:center;gap:6px;
+}
+
+/* ── Block list (bullets) ─────────────────────── */
+.blocks{list-style:none;padding:0}
+.block{
+  display:flex;align-items:baseline;gap:10px;
+  padding:3px 0;font-size:14.5px;
+}
+.block.ind{padding-left:24px}
+.block.ind2{padding-left:44px}
+.bl{
+  color:var(--bullet);font-size:8px;flex-shrink:0;
+  margin-top:6px;line-height:1;
+  width:6px;height:6px;background:var(--bullet);
+  border-radius:50%;flex-shrink:0;
+}
+.bc{flex:1}
+
+/* ── Wiki links ───────────────────────────────── */
+a.wl{
+  color:var(--link);text-decoration:none;
+  border-bottom:1px dotted var(--accent);
+  transition:color .15s,border-color .15s;
+}
+a.wl:hover{color:var(--link-h);border-color:var(--link-h)}
+
+/* ── Route table ──────────────────────────────── */
+.rt{
+  width:100%;border-collapse:collapse;margin:12px 0 20px;
+  font-size:13px;border-radius:10px;overflow:hidden;
+  box-shadow:var(--sh);
+}
+.rt th{
+  background:var(--tbl-h);color:var(--text2);
+  font-size:11px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.07em;padding:9px 12px;text-align:left;
+}
+.rt td{
+  padding:7px 12px;border-bottom:1px solid var(--border);
+  vertical-align:top;line-height:1.4;
+}
+.rt tr:last-child td{border-bottom:none}
+.rt tr:nth-child(even) td{background:var(--tbl-s)}
+.rt tr:hover td{background:var(--accent2)!important;transition:background .1s}
+.rt .t-time{font-family:'DM Mono',monospace;font-size:12.5px;color:var(--text2);white-space:nowrap}
+.rt .t-stay{font-family:'DM Mono',monospace;font-size:12px;color:var(--orange);font-weight:500;white-space:nowrap}
+.rt .t-km{font-family:'DM Mono',monospace;font-size:12px;color:var(--text2);white-space:nowrap}
+.rt .t-hl{font-weight:600}
+.rt .t-type{color:var(--text2);white-space:nowrap}
+
+/* ── Checklist ─────────────────────────────────── */
+.cl{list-style:none;padding:0}
+.cl li{display:flex;align-items:flex-start;gap:10px;padding:5px 0;font-size:14px}
+.cl input[type=checkbox]{
+  appearance:none;-webkit-appearance:none;
+  width:17px;height:17px;flex-shrink:0;
+  border:1.5px solid #c8b8a2;border-radius:4px;
+  margin-top:2px;cursor:pointer;
+  transition:background .15s,border-color .15s;
+}
+.cl input[type=checkbox]:checked{
+  background:var(--check);border-color:var(--check);
+}
+.cl input[type=checkbox]:checked::after{
+  content:'✓';display:block;color:#fff;
+  font-size:11px;text-align:center;line-height:16px;font-weight:700;
+}
+
+/* ── Info cards (restaurants) ─────────────────── */
+.card{
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:10px;padding:16px 18px;margin:10px 0;
+  box-shadow:var(--sh);
+}
+.card-head{
+  display:flex;align-items:center;gap:8px;
+  font-weight:600;font-size:15px;margin-bottom:10px;
+}
+.card-row{
+  display:flex;gap:10px;font-size:13px;
+  padding:4px 0;border-bottom:1px solid #f0ece6;
+}
+.card-row:last-child{border-bottom:none}
+.card-k{color:var(--text2);font-weight:500;min-width:110px;flex-shrink:0}
+.card-v{color:var(--text);flex:1}
+.badge{
+  background:var(--link);color:#fff;
+  font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;
+  letter-spacing:.04em;margin-left:4px;
+}
+.warn-pill{
+  display:inline-flex;align-items:center;gap:4px;
+  background:#fef3ec;color:var(--warn);border:1px solid #f5c8a8;
+  font-size:12px;font-weight:600;padding:1px 9px;border-radius:10px;
+}
+
+/* ── Day cards (overview) ─────────────────────── */
+.day-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0}
+.day-card{
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:12px;padding:18px 16px;
+  box-shadow:var(--sh);text-decoration:none;color:inherit;
+  transition:box-shadow .2s,transform .2s;display:block;
+}
+.day-card:hover{box-shadow:var(--sh2);transform:translateY(-2px)}
+.dc-ico{font-size:24px;margin-bottom:8px}
+.dc-day{font-size:10.5px;color:var(--text2);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}
+.dc-title{font-size:14.5px;font-weight:600;margin-bottom:7px;line-height:1.3;color:var(--text)}
+.dc-km{font-family:'DM Mono',monospace;font-size:12px;color:var(--orange);font-weight:500}
+
+/* ── Code ─────────────────────────────────────── */
+code{
+  font-family:'DM Mono',monospace;font-size:12px;
+  background:var(--tag-bg);padding:2px 7px;border-radius:4px;
+  color:var(--tag);
+}
+
+/* ── Linked references (LogSeq style) ────────── */
+.linked-refs{margin-top:44px}
+.lr-header{
+  font-size:11px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.1em;color:var(--text2);margin-bottom:12px;
+  display:flex;align-items:center;gap:6px;
+}
+.lr-card{
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:8px;margin:8px 0;overflow:hidden;
+  box-shadow:var(--sh);
+}
+.lr-card-title{
+  padding:8px 14px;background:var(--tbl-h);
+  font-size:12.5px;font-weight:600;
+  border-bottom:1px solid var(--border);
+}
+.lr-card-body{padding:8px 14px;font-size:13px;color:var(--text2)}
+
+/* ── Animations ────────────────────────────────── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.main > *{animation:fadeUp .3s ease both}
+.main > *:nth-child(1){animation-delay:.05s}
+.main > *:nth-child(2){animation-delay:.1s}
+.main > *:nth-child(3){animation-delay:.15s}
+.main > *:nth-child(4){animation-delay:.2s}
+
+/* ── Responsive ───────────────────────────────── */
+@media(max-width:768px){
+  .sidebar{display:none}
+  .main{padding:24px 20px 60px}
+  .day-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<aside class="sidebar">
+<div class="sb-logo">
+  <div class="sb-logo-icon">🚴</div>
+  <div class="sb-logo-text">
+    <div class="sb-logo-title">Radtour 2026</div>
+    <div class="sb-logo-sub">Düsseldorf · 19.–21. Juni</div>
+  </div>
+</div>
+<div class="sb-section">Seiten</div>
+<nav><a href="index.html" class=""><span class="sb-em">🚴</span>Übersicht</a>
+<a href="freitag.html" class=""><span class="sb-em">🌿</span>Freitag – Düssel & Angertal</a>
+<a href="samstag.html" class=""><span class="sb-em">🏰</span>Samstag – Kaiserswerth</a>
+<a href="sonntag.html" class="active"><span class="sb-em">🏙️</span>Sonntag – Gerresheim → Zons</a>
+<a href="restaurants.html" class=""><span class="sb-em">🍽️</span>Restaurantempfehlungen</a>
+</nav>
+<div class="sidebar-footer">niu, seven · Gerresheim<br>Heyestraße 221</div>
+</aside>
+<main class="main">
+<p class="page-eyebrow">Radtour 2026 · Sonntag 21. Juni</p>
+<h1 class="page-title">Sonntag, 21. Juni 2026</h1>
+<p class="page-subtitle">Gerresheim nach Altstadt Zons · 37,4 km · Start/Ziel: Hotel niu, seven</p>
+<div class="page-tags"><span class="tag">Radtour</span><span class="tag">2026-06-21</span><span class="tag">Sonntag</span><span class="tag">Benrath</span><span class="tag">Zons</span><span class="tag">Urdenbacher-Kämpe</span></div>
+
+<ul class="blocks">
+  <li class="block"><span class="bl"></span><span class="bc"><b>Start/Ziel:</b> niu, seven Düsseldorf · Heyestraße 221, Gerresheim</span></li>
+
+  <li class="block"><span class="bl"></span><span class="bc">← <a class="wl" href="samstag.html">Samstag</a> &nbsp;·&nbsp; <a class="wl" href="index.html">Übersicht</a></span></li>
+
+</ul>
+<hr class="divider">
+
+<div class="h2">📍 Wegpunkte</div>
+<table class="rt">
+<tr><th>Ankunft</th><th>Aufenthalt</th><th>Km</th><th>Wegpunkt</th><th>Typ</th></tr>
+<tr><td class="t-time">09:30</td><td class="t-stay"></td><td class="t-km">0,0</td><td class="t-hl">Start · Hotel niu, seven · Gerresheim</td><td class="t-type">🏨 Hotel</td></tr>
+<tr><td class="t-time">09:35</td><td class="t-stay"></td><td class="t-km">1,6</td><td>Renaturierte Südliche Düssel</td><td class="t-type">🌿 Natur</td></tr>
+<tr><td class="t-time">09:47</td><td class="t-stay">0:15 h</td><td class="t-km">5,1</td><td class="t-hl">Schloss Eller</td><td class="t-type">🏰 Schloss</td></tr>
+<tr><td class="t-time">10:25</td><td class="t-stay">0:15 h</td><td class="t-km">10,5</td><td class="t-hl">Schloss Benrath</td><td class="t-type">🏰 Schloss</td></tr>
+<tr><td class="t-time">10:46</td><td class="t-stay"></td><td class="t-km">11,9</td><td>Blick auf Schloss Benrath</td><td class="t-type">📷 Foto-Stop</td></tr>
+<tr><td class="t-time">10:54</td><td class="t-stay"></td><td class="t-km">14,2</td><td class="t-hl">Naturschutzgebiet Urdenbacher Kämpe</td><td class="t-type">🌿 Natur</td></tr>
+<tr><td class="t-time">11:01</td><td class="t-stay"></td><td class="t-km">16,1</td><td>Blick auf den alten Rhein</td><td class="t-type">📷 Aussicht</td></tr>
+<tr><td class="t-time">11:23</td><td class="t-stay">1:30 h</td><td class="t-km">21,4</td><td class="t-hl">Altstadt von Zons</td><td class="t-type">🏙️ Altstadt</td></tr>
+<tr><td class="t-time">13:26</td><td class="t-stay">0:45 h</td><td class="t-km">31,4</td><td class="t-hl">Seerestaurant Unterbacher See</td><td class="t-type">🍽️ Restaurant</td></tr>
+<tr><td class="t-time">14:35</td><td class="t-stay"></td><td class="t-km">37,4</td><td class="t-hl">Rückkehr · Hotel niu, seven</td><td class="t-type">🏨 Hotel</td></tr>
+</table>
+
+<hr class="divider">
+<div class="h2">🏛️ Sehenswürdigkeiten</div>
+
+<div class="h3">🏰 Schloss Eller</div>
+<ul class="blocks">
+  <li class="block ind"><span class="bl"></span><span class="bc">Wasserschloss im Düsseldorfer Süden</span></li>
+
+  <li class="block ind"><span class="bl"></span><span class="bc">Parkanlage & romantische Kulisse</span></li>
+
+</ul>
+
+<div class="h3">🏰 Schloss Benrath</div>
+<ul class="blocks">
+  <li class="block ind"><span class="bl"></span><span class="bc">Barockes Lustschloss am Rhein</span></li>
+
+  <li class="block ind"><span class="bl"></span><span class="bc">Öffnungszeiten: Di–So 10–18 Uhr &nbsp;<span class="warn-pill">⚠️ Mo geschlossen!</span></span></li>
+
+  <li class="block ind"><span class="bl"></span><span class="bc">Eintritt: ~9 €/Person · Schlosspark ideal für Pause</span></li>
+
+</ul>
+
+<div class="h3">🌿 Urdenbacher Kämpe</div>
+<ul class="blocks">
+  <li class="block ind"><span class="bl"></span><span class="bc">Naturschutzgebiet mit Auenlandschaft</span></li>
+
+  <li class="block ind"><span class="bl"></span><span class="bc">Vogelbeobachtung · Alter Rheinarm</span></li>
+
+</ul>
+
+<div class="h3">🏙️ Altstadt Zons</div>
+<ul class="blocks">
+  <li class="block ind"><span class="bl"></span><span class="bc">Mittelalterliche Zollburg am Rhein</span></li>
+
+  <li class="block ind"><span class="bl"></span><span class="bc">Stadtmauern & Rheintor</span></li>
+
+  <li class="block ind"><span class="bl"></span><span class="bc">Gemütlicher Abschluss mit Mittagessen am Rhein</span></li>
+
+</ul>
+
+<hr class="divider">
+<div class="h2">✅ Checkliste</div>
+<ul class="cl">
+  <li><input type="checkbox" data-id="so1"><span>Schloss Benrath Mo geschlossen! → Di–So buchen</span></li>
+  <li><input type="checkbox" data-id="so2"><span>Mittagessen in Zons reservieren?</span></li>
+  <li><input type="checkbox" data-id="so3"><span>Rückweg / Abreise planen</span></li>
+  <li><input type="checkbox" data-id="so4"><span>Abreise nach Hause vom Hotel einplanen</span></li>
+</ul>
+
+<hr class="divider">
+<div class="h2">📁 GPX-Datei</div>
+<ul class="blocks"><li class="block"><span class="bl"></span><span class="bc"><code>2026-03-06_2655266080_Düsseldorf Gerresheim nach Altstadt Zons.gpx</code></span></li>
+</ul>
+
+
+</main>
+<script>
+document.querySelectorAll('.cl input[type=checkbox]').forEach(cb=>{
+  const k='rad26_'+location.pathname+'_'+cb.dataset.id;
+  if(localStorage.getItem(k)==='1')cb.checked=true;
+  cb.addEventListener('change',()=>localStorage.setItem(k,cb.checked?'1':'0'));
+});
+</script>
+</body>
+</html>
