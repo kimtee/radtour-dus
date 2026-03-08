@@ -325,6 +325,12 @@ code{
 <div class="card"><div class="card-head">🐟 Nagomi</div><div class="card-row"><span class="card-k">Adresse</span><span class="card-v">Im Japanviertel (Immermannstr. / Klosterstr.)</span></div><div class="card-row"><span class="card-k">Typ</span><span class="card-v">Sushi & japanische Küche</span></div><div class="card-row"><span class="card-k">Spezialität</span><span class="card-v">Hochwertiges Sushi (Blauflossen-Thunfisch Toro), Udon- & Sobanudeln</span></div><div class="card-row"><span class="card-k">Atmosphäre</span><span class="card-v">Einfach eingerichtet, einheimisches Publikum, Terrasse im Sommer</span></div><div class="card-row"><span class="card-k">Preis</span><span class="card-v">€€ – Mittel</span></div><div class="card-row"><span class="card-k">Hinweis</span><span class="card-v">Reservierung empfohlen, oft ausgebucht</span></div></div>
 
 
+<div class="card"><div class="card-head">🍝 Trattoria da Giovanni</div><div class="card-row"><span class="card-k">Typ</span><span class="card-v">Mediterrane Küche / Fischgerichte</span></div><div class="card-row"><span class="card-k">Spezialität</span><span class="card-v">Seit 25+ Jahren bekannt für Fischgerichte und mediterrane Küche</span></div><div class="card-row"><span class="card-k">Web</span><span class="card-v"><a class="wl" href="https://trattoria-basilico.de" target="_blank">trattoria-basilico.de ↗</a></span></div><div class="card-row"><span class="card-k">Reservierung</span><span class="card-v"><span class="warn-pill">⚠️ Vorbuchen + Schließzeit bestätigen!</span></span></div></div>
+
+
+<div class="card"><div class="card-head">🍽️ Herr Knillmann</div><div class="card-row"><span class="card-k">Telefon</span><span class="card-v">0211 22 086 790</span></div><div class="card-row"><span class="card-k">Öffnungszeit</span><span class="card-v">Fr bis 24 Uhr</span></div><div class="card-row"><span class="card-k">Reservierung</span><span class="card-v"><span class="warn-pill">⚠️ Für 14 Personen vorbuchen!</span></span></div></div>
+
+
 <hr class="divider">
 <div class="h2">🍺 Samstagabend – Düsseldorfer Altstadt</div>
 <p style="font-size:13.5px;color:var(--text2);margin-bottom:14px">Ihr seid tagsüber ohnehin schon in der Altstadt – einfach abends zurückkehren!</p>
@@ -344,22 +350,7 @@ code{
 <div class="card"><div class="card-head">🍺 Original Brauhäuser – spontan, ohne Reservierung</div><div class="card-row"><span class="card-k">Uerige</span><span class="card-v">Berger Straße 1 – das Original-Brauhaus</span></div><div class="card-row"><span class="card-k">Füchschen</span><span class="card-v">Ratinger Straße 28 – familiär, gutes Essen</span></div><div class="card-row"><span class="card-k">Schumacher</span><span class="card-v">Oststraße 123 – eines der ältesten Brauhäuser</span></div><div class="card-row"><span class="card-k">Atmosphäre</span><span class="card-v">Altbier frisch vom Fass · deftige rheinische Küche · Tische werden geteilt – typisch rheinisch!</span></div><div class="card-row"><span class="card-k">Preis</span><span class="card-v">€ – Günstig</span></div></div>
 
 
-<hr class="divider">
-<div class="h2">✅ Checkliste</div>
-<ul class="cl">
-  <li><input type="checkbox" data-id="re1"><span>Freitag: Kushi-Tei of Tokyo reservieren (Telefon / direkt anfragen)</span></li>
-  <li><input type="checkbox" data-id="re2"><span>Samstag: Weinhaus Tante Anna oder Brasserie Stadthaus reservieren</span></li>
-  <li><input type="checkbox" data-id="re3"><span>Alternative prüfen falls Kushi-Tei voll: Nagomi oder Takumi</span></li>
-</ul>
-
 
 </main>
-<script>
-document.querySelectorAll('.cl input[type=checkbox]').forEach(cb=>{
-  const k='rad26_'+location.pathname+'_'+cb.dataset.id;
-  if(localStorage.getItem(k)==='1')cb.checked=true;
-  cb.addEventListener('change',()=>localStorage.setItem(k,cb.checked?'1':'0'));
-});
-</script>
 </body>
 </html>
