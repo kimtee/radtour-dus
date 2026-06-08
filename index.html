@@ -227,11 +227,13 @@ a.wl:hover{color:var(--link-h);border-color:var(--link-h)}
 
 /* ── Day cards (overview) ─────────────────────── */
 .day-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0}
+.day-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0;align-items:start}
 .day-card{
   background:var(--bg2);border:1px solid var(--border);
   border-radius:12px;padding:18px 16px;
   box-shadow:var(--sh);text-decoration:none;color:inherit;
   transition:box-shadow .2s,transform .2s;display:block;
+  min-height:130px;
 }
 .day-card:hover{box-shadow:var(--sh2);transform:translateY(-2px)}
 .dc-ico{font-size:24px;margin-bottom:8px}
@@ -296,7 +298,7 @@ code{
 <a href="samstag.html" class=""><span class="sb-em">🏰</span>Samstag – Kaiserswerth</a>
 <a href="sonntag.html" class=""><span class="sb-em">🏙️</span>Sonntag – Gerresheim → Zons</a>
 <a href="restaurants.html" class=""><span class="sb-em">🍽️</span>Restaurantempfehlungen</a>
-<a href="hotel.html" class=""><span class="sb-em">🏨</span>Hotel</a>
+<a href="planung.html" class=""><span class="sb-em">📋</span>Planung & Kosten</a>
 </nav>
 <div class="sidebar-footer">niu, seven · Gerresheim<br>Heyestraße 221</div>
 </aside>
@@ -309,47 +311,68 @@ code{
 <ul class="blocks">
   <li class="block"><span class="bl"></span><span class="bc"><b>Zeitraum:</b> 19.–21. Juni 2026</span></li>
 
-  <li class="block"><span class="bl"></span><span class="bc"><b>Hotel:</b> <a class="wl" href="hotel.html">niu, seven Düsseldorf · Heyestraße 221, Gerresheim</a></span></li>
+  <li class="block"><span class="bl"></span><span class="bc"><b>Hotel:</b> niu, seven Düsseldorf · Heyestraße 221, Gerresheim</span></li>
 
 </ul>
 <hr class="divider">
 
 <div class="h2">📅 Tagesrouten</div>
+<div class="day-grid">
+  <a class="day-card" href="freitag.html">
+    <div class="dc-ico">🌿</div>
+    <div class="dc-day">Fr · 19. Juni</div>
+    <div class="dc-title">Düssel und Angertal</div>
+    <div class="dc-km">43,7 km</div>
+  </a>
+  <a class="day-card" href="samstag.html">
+    <div class="dc-ico">🏰</div>
+    <div class="dc-day">Sa · 20. Juni</div>
+    <div class="dc-title">Kaiserswerth und Altstadt</div>
+    <div class="dc-km">56,0 km</div>
+  </a>
+  <a class="day-card" href="sonntag.html">
+    <div class="dc-ico">🏙️</div>
+    <div class="dc-day">So · 21. Juni</div>
+    <div class="dc-title">Gerresheim nach Zons</div>
+    <div class="dc-km">37,4 km</div>
+  </a>
+</div>
+
+<hr class="divider">
+<div class="h2">📊 Übersicht</div>
 <table class="rt">
   <tr><th>Tag</th><th>Tour</th><th>Distanz</th><th>Highlights</th></tr>
-  <tr><td class="t-time">Fr 19.6.</td><td><a class="wl" href="freitag.html">Düssel und Angertal</a></td><td class="t-km">39,4 km</td><td>Neanderthal Museum · Hofermühle · Auermühle · Galopprennbahn</td></tr>
+  <tr><td class="t-time">Fr 19.6.</td><td><a class="wl" href="freitag.html">Düssel und Angertal</a></td><td class="t-km">43,7 km</td><td>Galopprennbahn · Herrenhaus Cromford · Auermühle · Hofermühle · Neanderthal Museum</td></tr>
   <tr><td class="t-time">Sa 20.6.</td><td><a class="wl" href="samstag.html">Kaiserswerth und Altstadt</a></td><td class="t-km">56,0 km</td><td>Grafenberger Wald · Ratingen · Schloss Kalkum · Kaiserswerth · Altstadt</td></tr>
   <tr><td class="t-time">So 21.6.</td><td><a class="wl" href="sonntag.html">Gerresheim nach Zons</a></td><td class="t-km">37,4 km</td><td>Schloss Eller · Schloss Benrath · Urdenbacher Kämpe · Altstadt Zons</td></tr>
 </table>
 
-<img src="assets/route-overview.png" alt="Routenübersicht" style="width:100%;border-radius:12px;margin-top:1.2rem;margin-bottom:0.8rem;">
-<a class="wl" href="https://www.komoot.com/de-de/collection/3843004/-radtour-2026-duesseldorf" target="_blank" style="display:inline-block;margin-bottom:1.2rem;">🗺️ Alle Touren auf Komoot öffnen</a>
-
 <hr class="divider">
-<div class="h2">📁 GPX-Dateien & Komoot-Touren</div>
+<div class="h2">🍽️ Abendessen</div>
 <ul class="blocks">
-  <li class="block"><span class="bl"></span><span class="bc"><a class="wl" href="https://www.komoot.com/de-de/tour/2655024952" target="_blank">Entlang der Düssel und Angertal</a></span></li>
+  <li class="block"><span class="bl"></span><span class="bc"><b>Fr 19.6.:</b> 🍽️ Herr Knillmann · Gerresheim · <span style="color:#2e7d32;font-weight:600">✅ Reserviert</span></span></li>
 
-  <li class="block"><span class="bl"></span><span class="bc"><a class="wl" href="https://www.komoot.com/de-de/tour/2655040150" target="_blank">Düsseldorf Kaiserswerth und Altstadt</a></span></li>
-
-  <li class="block"><span class="bl"></span><span class="bc"><a class="wl" href="https://www.komoot.com/de-de/tour/2655266080" target="_blank">Düsseldorf Gerresheim nach Altstadt Zons</a></span></li>
-
-  <li class="block"><span class="bl"></span><span class="bc"><a class="wl" href="https://www.komoot.com/de-de/tour/2814242909" target="_blank">Gerresheim (Hotel) nach Stellarium Erkrath</a></span></li>
+  <li class="block"><span class="bl"></span><span class="bc"><b>Sa 20.6.:</b> 🍸 20° Restobar · 19:00 Uhr · <span style="color:#2e7d32;font-weight:600">✅ Reserviert</span></span></li>
 
 </ul>
 
 <hr class="divider">
-<div class="h2">🍽️ Abendessen</div>
+<div class="h2">📁 GPX-Dateien</div>
 <ul class="blocks">
-  <li class="block"><span class="bl"></span><span class="bc"><b>Fr 19.6.:</b> 🍣 Japanisch – Little Tokyo · <a class="wl" href="restaurants.html">Restaurantempfehlungen</a></span></li>
+  <li class="block"><span class="bl"></span><span class="bc"><code>Entlang der Düssel und Angertal.gpx</code></span></li>
 
-  <li class="block"><span class="bl"></span><span class="bc"><b>Sa 20.6.:</b> 🍺 Düsseldorfer Altstadt · <a class="wl" href="restaurants.html">Restaurantempfehlungen</a></span></li>
+  <li class="block"><span class="bl"></span><span class="bc"><code>Düsseldorf Kaiserswerth und Altstadt.gpx</code></span></li>
+
+  <li class="block"><span class="bl"></span><span class="bc"><code>Düsseldorf Gerresheim nach Altstadt Zons.gpx</code></span></li>
 
 </ul>
 
 <div class="linked-refs">
 <div class="lr-header">🔗 Linked References</div>
 <div class="lr-card"><div class="lr-card-title"><a class="wl" href="restaurants.html">Fahrradtour 2026 – Restaurantempfehlungen</a></div><div class="lr-card-body">Übersicht: Fahrradtour 2026 – Düsseldorf</div></div>
+<div class="lr-card"><div class="lr-card-title"><a class="wl" href="freitag.html">Fahrradtour 2026 – Freitag – Düssel und Angertal</a></div><div class="lr-card-body">Zurück: Fahrradtour 2026 – Düsseldorf</div></div>
+<div class="lr-card"><div class="lr-card-title"><a class="wl" href="samstag.html">Fahrradtour 2026 – Samstag – Kaiserswerth und Altstadt</a></div><div class="lr-card-body">Zurück: Fahrradtour 2026 – Düsseldorf</div></div>
+<div class="lr-card"><div class="lr-card-title"><a class="wl" href="sonntag.html">Fahrradtour 2026 – Sonntag – Gerresheim nach Zons</a></div><div class="lr-card-body">Überblick: Fahrradtour 2026 – Düsseldorf</div></div>
 </div>
 </main>
 <script>
